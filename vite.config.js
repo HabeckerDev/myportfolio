@@ -2,5 +2,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/your-repo-name/', // Replace 'your-repo-name' with the name of your GitHub repository
+  base: '/myprofile/', // Replace 'your-repo-name' with the name of your GitHub repository
 });
