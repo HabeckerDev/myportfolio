@@ -26,7 +26,7 @@ renderer.render(scene, camera);
 
 const loader = new GLTFLoader();
 
-loader.load( 'assets/Penny.gltf', function ( gltf ) {
+loader.load( 'public/Penny.gltf', function ( gltf ) {
   const penny_model = gltf.scene;
 	
   // Change size and position
@@ -36,7 +36,7 @@ loader.load( 'assets/Penny.gltf', function ( gltf ) {
 
   // Load texture
 
-  const pennyTexture = new THREE.TextureLoader().load('assets/Penny.png', function (texture) {
+  const pennyTexture = new THREE.TextureLoader().load('public/Penny.png', function (texture) {
     penny_model.traverse((child) => {
       if (child.isMesh) {
         child.material.map = texture;
@@ -93,12 +93,12 @@ Array(200).fill().forEach(addStar);
 // Background
 
 // const spaceTexture = new THREE.TextureLoader().load('space.jpg');
-const aiTexture = new THREE.TextureLoader().load('assets/aibg.jpg');
+const aiTexture = new THREE.TextureLoader().load('public/aibg.jpg');
 scene.background = aiTexture;
 
 // Avatar
 
-const dylanTexture = new THREE.TextureLoader().load('assets/dylan.jpg');
+const dylanTexture = new THREE.TextureLoader().load('public/dylan.jpg');
 
 const dylan = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
